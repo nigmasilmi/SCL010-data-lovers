@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
-    <!-- <script src="./data/patient/patient.js"></script> -->
-    <!-- <script src="./data/rickandmorty/rickandmorty.js"></script> -->
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="root">
+    <header>
+      <div id="headerText">Estadísticas de Incidentes </br> por medio de transporte</div>
+      <div id="headerLogo"></div>
+    </header>
+    <main role="main">
+      <div id="hero">
+        <img src="imgs/travel-to-united-states-of-america.jpg" alt="American Flag Suitcases">
+      </div>
+      <div class="btn_panel">
+        <div class="btnMedia air">
+          <img class="icon" src="imgs/plane-03.svg" alt="Plane Icon">
+          <h2>Aéreo</h2>
+        </div>
+        <div class="btnMedia transit">
+            <img class="icon" src="imgs/terrestre1.png" alt="Car Icon">
+            <h2>Terrestre</h2>
+          </div>
+          <div class="btnMedia water">
+              <img class="icon" src="imgs/acuatico.svg" alt="Boat Icon">
+              <h2>Acuático</h2>
+            </div>
+      </div>
+    </main>
+
+
+    <footer>
+      Aquí va el contenido del footer
+    </footer>
+    <!--div id root closing-->
+  </div>
+  <script src="./data/injuries/injuries.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
