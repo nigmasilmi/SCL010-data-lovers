@@ -17,17 +17,19 @@ font-family: 'Questrial', sans-serif;
 /* Generic Styles */
 body {
   font-family: 'Questrial', sans-serif;
-
+  margin: 0px;
 }
 
 
 header {
   background-color: #fec01c;
+}
 
+h1 {
+  margin: 0px;
 }
 
 #hero {
-  margin: 1% 20% 1% 20%;
 }
 
 .btn_panel {
@@ -39,7 +41,6 @@ header {
 
 .btnMedia {
   display: flex;
-  align-items: center;
   background-color: #fec01c;
   padding: 3%;
   margin: 5%;
@@ -81,4 +82,54 @@ footer {
 
 @media screen and (min-width: 768px) {}
 
-@media screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) {
+  #headerText{
+    padding: 15px;
+  }
+
+  .webName{
+    font-size: 35px;
+    margin: 0px;  
+  }
+
+  .sloganName{
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+
+  div#hero {
+    width: 100%;
+    height: 350px;
+    background: #ffffff url("imgs/travel-to-united-states-of-america.jpg") no-repeat left top;
+    background-size: cover;
+  }
+
+  .btnMedia {
+    display: inline-block;
+    background-color: #fec01c;
+    padding: 5px;
+    margin: 15px;
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 60px;
+    font-size: 20px;
+  }
+
+  .btn_panel{
+    width: 100%;
+    margin: 20px;
+    flex-direction: initial;
+    align-items: initial;
+
+  }
+
+  .btnContainer{
+    float: left;
+    width: 33%;
+    height: 130px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
