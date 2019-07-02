@@ -1,53 +1,66 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Data Lovers</title>
+  <title>Data Lovers - Incidencias Acuáticas USA</title>
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Questrial&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-
-<body>
-  <div id="root">
-    <header>
-      <div id="headerText">Estadísticas de Incidentes </br> por medio de transporte</div>
-      <div id="headerLogo"></div>
-    </header>
-    <main role="main">
-      <div id="hero">
-        <img src="imgs/travel-to-united-states-of-america.jpg" alt="American Flag Suitcases">
-      </div>
-      <div class="btn_panel">
-        <a href="aereo.html">detalle</a>
-        <div class="btnMedia air">
-
-          <img class="icon" src="imgs/plane-03.svg" alt="Plane Icon">
-          <h2>Aéreo</h2>
+<header>
+  <div id="headerText">Estadísticas de Incidentes </br> por medio de transporte</div>
+  <div id="headerText">
+    <h1 class="webName">Incidentes de Transporte</h1>
+    <h2 class="sloganName">Conociendo que tranporte es mas seguro</h2>
+  </div>
+  <div id="headerLogo"></div>
+</header>
+<main role="main">
+  <div id="hero">
+    <img src="imgs/travel-to-united-states-of-america.jpg" alt="American Flag Suitcases">
+  </div>
+  <div class="btn_panel">
+    <div class="btnMedia air">
+      <a href="detalle.html">detalle</a>
+      <img class="icon" src="imgs/plane-03.svg" alt="Plane Icon">
+      <h2>Aéreo</h2>
+      <div id="btnPanel" class="btn_panel">
+        <div class="btnContainer">
+          <div id="btnFlight" class="btnMedia air">
+            <i class="material-icons">flight</i>
+            <h2>Aéreo</h2>
+          </div>
         </div>
         <div class="btnMedia transit">
           <img class="icon" src="imgs/terrestre1.png" alt="Car Icon">
-          <h2>Terrestre</h2>
+          <div class="btnContainer">
+            <div id="btnCar" class="btnMedia transit">
+              <i class="material-icons">directions_car</i>
+              <h2>Terrestre</h2>
+            </div>
+            <div class="btnMedia water">
+              <img class="icon" src="imgs/acuatico.svg" alt="Boat Icon">
+              <h2>Acuático</h2>
+            </div>
+          </div>
+          <div class="btnContainer">
+            <div id="btnWater" class="btnMedia water">
+              <i class="material-icons">directions_boat</i>
+              <h2>Acuático</h2>
+            </div>
+          </div>
         </div>
-        <div class="btnMedia water">
-          <img class="icon" src="imgs/acuatico.svg" alt="Boat Icon">
-          <h2>Acuático</h2>
-        </div>
-      </div>
-    </main>
-
-
-    <footer>
-      Aquí va el contenido del footer
-    </footer>
-    <!--div id root closing-->
-  </div>
-  <script src="./data/injuries/injuries.js"></script>
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+</main>
+<footer>
+  Aquí va el contenido del footer
+</footer>
+<!--div id root closing-->
+</div>
+<script src="./data/injuries/injuries.js"></script>
+<script src="data.js"></script>
+<script src="main.js"></script>
 </body>
 
 </html>
