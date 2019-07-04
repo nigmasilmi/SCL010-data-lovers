@@ -31,7 +31,6 @@ h1 {
 }
 
 
-
 .btn_panel {
   display: flex;
   flex-direction: column;
@@ -60,8 +59,12 @@ h1 {
 }
 
 footer {
-  height: 20%;
-  width: 90%;
+  display: flex;
+  justify-content: center;
+  height: 40%;
+  width: 100%;
+  padding: 3%;
+  text-align: center;
   background-color: #fec01c;
 }
 
@@ -78,17 +81,96 @@ footer {
     text-align: right;
   }
 
+  .webName {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+    margin-top: 4%;
+    font-size: 1em;
+    border-bottom: 1px solid #333;
+
+  }
+
+  .sloganName {
+
+    font-size: 0.7em;
+    color: #333;
+
+  }
+
+  .heroContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fec01c;
+    padding: 3%;
+  }
+
+  .heroContainer img{
+   max-width: 90%;
+  }
+
+  .btnContainer {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+  .btn_base {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 4%;
+    padding: 1%;
+    max-height: 20vh;
+    background-color: #fec01c;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    cursor: pointer;
+
+
+  }
+
+  .svgIcon {
+    max-width: 30%;
+    display: block;
+  }
+
+  .svgIconA {
+   
+    max-height: 73%;
+    display: block;
+    
+  }
+
+  .logoIconSmall {
+    margin-top: 5%;
+    max-width: 30%;
+    margin-left: -39%;
+
+  }
+
   .shield {
     max-width: 30%;
     margin-left: -6.7%;
     margin-top: 7%;
   }
 
-  .headerText {
+  .shieldIndex {
+    max-width: 50%;
+    margin-left: -8.7%;
+    margin-top: 7%;
+  }
+
+  .headerTextIndex {
     display: flex;
     flex-direction: column;
     margin-left: 6%;
-    margin-top: 4%;
+    margin-top: 8%;
   }
 
   .headerTitle,
@@ -117,7 +199,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
+    align-content: flex-end;
+    margin-left: 3%;
 
   }
 
@@ -128,14 +211,25 @@ footer {
     transform: translateX(40%);
   }
 
+  .mediaIconA {
+    max-width: 20%;
+    transform: translateX(30%)
+  }
+
   .mediaIconSmall {
     max-width: 20%;
     margin-left: -20%;
     filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
     -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
     -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+  }
 
-
+  .mediaIconSmallA {
+    max-width: 16%;
+    margin-left: -20%;
+    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
   }
 
 
@@ -176,128 +270,29 @@ footer {
 
   }
 
+  .mainTitle,
+  .totalTitle {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    text-align: center;
+    margin-bottom: 2%;
+
+  }
+
+  .totalIncidents,
+  .twoMainIncidents {
+    width: 90%;
+    margin: 0 auto;
+    color: #333;
+    border: 3px solid #fcbe32;
+    padding: 1%;
+  }
+
+
   footer {
     background-color: #fec01c;
   }
 
-  /*TABLETS MEDIA QUERY*/
 
-  @media screen and (min-width: 768px) {
-    body {
-      background-color: red;
-    }
-
-    header {
-      display: flex;
-      margin-bottom: 5%;
-      padding: 3% 5%;
-      text-align: right;
-    }
-
-    .shield {
-      max-width: 10%;
-      margin-left: -1%;
-      margin-top: 10%;
-    }
-
-    .headerText {
-      display: flex;
-      flex-direction: column;
-      margin-left: 6%;
-      margin-top: 4%;
-    }
-
-    .headerTitle,
-    .headerSubTitle {
-      font-family: 'Fira Sans Condensed', sans-serif;
-
-    }
-
-    .headerTitle {
-      font-size: 1.1em;
-    }
-
-    .headerSubTitle {
-      font-size: 0.9em;
-      letter-spacing: .12em;
-      margin-top: -7%;
-
-    }
-
-    .iconEach {
-      align-self: self-start;
-      max-width: 10%;
-    }
-
-    .headerEachPage {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-content: center;
-
-    }
-
-
-    .mediaIcon {
-      max-width: 30%;
-      align-self: flex-end;
-      transform: translateX(40%);
-    }
-
-    .mediaIconSmall {
-      max-width: 25%;
-      margin-left: -20%;
-      filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-      -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-      -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-
-
-    }
-
-
-    .headerEachPage h2 {
-      margin-right: 30%;
-
-      font-weight: 300;
-      transform: translateY(30%);
-      position: relative;
-      margin-left: 3%;
-      font-weight: 300;
-    }
-
-    table {
-      font-size: 0.9em;
-      color: #333;
-    }
-
-    thead,
-    th {
-      background-color: #fcbe32;
-      color: #000;
-      border: 1px solid #333;
-      padding: 1%;
-    }
-
-    td {
-      width: 40%;
-      height: 2rem;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
-
-    .graphics {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-
-    }
-
-    footer {
-      background-color: #fec01c;
-    }
-
-
-  }
 
 
   @media screen and (min-width: 992px) {
@@ -321,33 +316,41 @@ footer {
       background: #ffffff url("imgs/travel-to-united-states-of-america.jpg") no-repeat left top;
       background-size: cover;
     }
-
-    .btnMedia {
-      display: inline-block;
-      background-color: #fec01c;
-      padding: 5px;
-      margin: 15px;
-      width: 100px !important;
-      height: 100px !important;
-      border-radius: 60px;
-      font-size: 20px;
+    .heroContainer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .btn_panel {
-      width: 100%;
-      margin: 20px;
-      flex-direction: initial;
-      align-items: initial;
+    .heroContainer img{
+     max-width: 40%;
+    }
 
+
+    .btn_panel {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      background-color: red;
+      border-radius: 50%;
+
+    }
+
+    .mediaIconA {
+      max-width: 20%;
+      transform: translateX(30%)
+    }
+
+    .btn_panel img {
+      width: 30%;
     }
 
     .btnContainer {
-      float: left;
       width: 33%;
       height: 130px;
       align-items: center;
       display: flex;
-      flex-direction: column;
+
     }
 
 
