@@ -14,7 +14,8 @@ font-family: 'Questrial', sans-serif;
     font-family: 'Fira Sans Condensed', sans-serif;
 */
 
-/* Generic Styles */
+/* GENERIC STYLES */
+
 body {
   font-family: 'Questrial', sans-serif;
   margin: 0px;
@@ -29,8 +30,7 @@ h1 {
   margin: 0px;
 }
 
-#hero {
-}
+
 
 .btn_panel {
   display: flex;
@@ -66,23 +66,291 @@ footer {
 }
 
 
-/*  Media Query for up to 767 px  */
+
+
+/*CELLPHONES MEDIA QUERY*/
 
 @media screen and (max-width: 767px) {
-  .btn_panel {
+  header {
     display: flex;
-  
+    margin-bottom: 5%;
+    padding: 3% 5%;
+    text-align: right;
   }
 
-  .icon {
+  .shield {
+    max-width: 30%;
+    margin-left: -6.7%;
+    margin-top: 7%;
+  }
+
+  .headerText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+    margin-top: 4%;
+  }
+
+  .headerTitle,
+  .headerSubTitle {
+    font-family: 'Fira Sans Condensed', sans-serif;
+
+  }
+
+  .headerTitle {
+    font-size: 1.1em;
+  }
+
+  .headerSubTitle {
+    font-size: 0.9em;
+    letter-spacing: .12em;
+    margin-top: -7%;
+
+  }
+
+  .iconEach {
+    align-self: self-start;
+    max-width: 10%;
+  }
+
+  .headerEachPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+  }
+
+
+  .mediaIcon {
+    max-width: 30%;
+    align-self: flex-end;
+    transform: translateX(40%);
+  }
+
+  .mediaIconSmall {
     max-width: 20%;
+    margin-left: -20%;
+    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+
+
   }
 
-}
 
-@media screen and (min-width: 768px) {}
+  .headerEachPage h2 {
+    margin-right: 30%;
 
-@media only screen and (min-width: 992px) {
+    font-weight: 300;
+    transform: translateY(30%);
+    position: relative;
+    margin-left: 3%;
+    font-weight: 300;
+  }
+
+  table {
+    font-size: 0.9em;
+    color: #333;
+  }
+
+  thead,
+  th {
+    background-color: #fcbe32;
+    color: #000;
+    border: 1px solid #333;
+    padding: 1%;
+  }
+
+  td {
+    width: 40%;
+    height: 2rem;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  .graphics {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+  }
+
+  footer {
+    background-color: #fec01c;
+  }
+
+  /*TABLETS MEDIA QUERY*/
+
+  @media screen and (min-width: 768px) {
+    body {
+      background-color: red;
+    }
+
+    header {
+      display: flex;
+      margin-bottom: 5%;
+      padding: 3% 5%;
+      text-align: right;
+    }
+
+    .shield {
+      max-width: 10%;
+      margin-left: -1%;
+      margin-top: 10%;
+    }
+
+    .headerText {
+      display: flex;
+      flex-direction: column;
+      margin-left: 6%;
+      margin-top: 4%;
+    }
+
+    .headerTitle,
+    .headerSubTitle {
+      font-family: 'Fira Sans Condensed', sans-serif;
+
+    }
+
+    .headerTitle {
+      font-size: 1.1em;
+    }
+
+    .headerSubTitle {
+      font-size: 0.9em;
+      letter-spacing: .12em;
+      margin-top: -7%;
+
+    }
+
+    .iconEach {
+      align-self: self-start;
+      max-width: 10%;
+    }
+
+    .headerEachPage {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+
+    }
+
+
+    .mediaIcon {
+      max-width: 30%;
+      align-self: flex-end;
+      transform: translateX(40%);
+    }
+
+    .mediaIconSmall {
+      max-width: 25%;
+      margin-left: -20%;
+      filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+      -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+      -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+
+
+    }
+
+
+    .headerEachPage h2 {
+      margin-right: 30%;
+
+      font-weight: 300;
+      transform: translateY(30%);
+      position: relative;
+      margin-left: 3%;
+      font-weight: 300;
+    }
+
+    table {
+      font-size: 0.9em;
+      color: #333;
+    }
+
+    thead,
+    th {
+      background-color: #fcbe32;
+      color: #000;
+      border: 1px solid #333;
+      padding: 1%;
+    }
+
+    td {
+      width: 40%;
+      height: 2rem;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .graphics {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+    }
+
+    footer {
+      background-color: #fec01c;
+    }
+
+
+  }
+
+
+  @media screen and (min-width: 992px) {
+    #headerText {
+      padding: 15px;
+    }
+
+    .webName {
+      font-size: 35px;
+      margin: 0px;
+    }
+
+    .sloganName {
+      margin-top: 5px;
+      margin-bottom: 0px;
+    }
+
+    div#hero {
+      width: 100%;
+      height: 350px;
+      background: #ffffff url("imgs/travel-to-united-states-of-america.jpg") no-repeat left top;
+      background-size: cover;
+    }
+
+    .btnMedia {
+      display: inline-block;
+      background-color: #fec01c;
+      padding: 5px;
+      margin: 15px;
+      width: 100px !important;
+      height: 100px !important;
+      border-radius: 60px;
+      font-size: 20px;
+    }
+
+    .btn_panel {
+      width: 100%;
+      margin: 20px;
+      flex-direction: initial;
+      align-items: initial;
+
+    }
+
+    .btnContainer {
+      float: left;
+      width: 33%;
+      height: 130px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+
   #headerText{
     padding: 15px;
   }
@@ -132,4 +400,5 @@ footer {
     flex-direction: column;
   }
 
+}
 }
