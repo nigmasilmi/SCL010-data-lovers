@@ -365,32 +365,48 @@ footer {
 
 }
 
-.btn_baseIndex{
-	margin: 1em;
-	width: 100%;
-	max-width: 200px;
-	text-align: center;
- 
+    div#hero {
+      width: 100%;
+      height: 350px;
+      background: #ffffff url("imgs/travel-to-united-states-of-america.jpg") no-repeat left top;
+      background-size: cover;
+    }
+    .heroContainer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-}
+    .heroContainer img{
+     max-width: 40%;
+    }
 
-.svgIconIndex{
- 
-  overflow: visible;
-  background-color: #fec01c;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  cursor: pointer;
 
-}
+    .btn_panel {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      background-color: red;
+      border-radius: 50%;
 
-.btn_baseIndex img{
-  width: 50%;
-  height: 50%;
-  margin-top: 3%;
-  
-}
+    }
+
+    .mediaIconA {
+      max-width: 20%;
+      transform: translateX(30%)
+    }
+
+    .btn_panel img {
+      width: 30%;
+    }
+
+    .btnContainer {
+      width: 33%;
+      height: 130px;
+      align-items: center;
+      display: flex;
+
+    }
 
 .btn_baseIndex h4{
   font-size: 1.2em;
@@ -446,5 +462,4 @@ footer {
     flex-direction: column;
   }
 
-}
 }
