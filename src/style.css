@@ -8,10 +8,9 @@
 */
 
 /* Fonts
-
 font-family: 'Questrial', sans-serif;
 
-    font-family: 'Fira Sans Condensed', sans-serif;
+font-family: 'Fira Sans Condensed', sans-serif;
 */
 
 /* GENERIC STYLES */
@@ -21,7 +20,6 @@ body {
   margin: 0px;
 }
 
-
 header {
   background-color: #fec01c;
 }
@@ -29,7 +27,6 @@ header {
 h1 {
   margin: 0px;
 }
-
 
 
 .btn_panel {
@@ -60,8 +57,12 @@ h1 {
 }
 
 footer {
-  height: 20%;
-  width: 90%;
+  display: flex;
+  justify-content: center;
+  height: 40%;
+  width: 100%;
+  padding: 3%;
+  text-align: center;
   background-color: #fec01c;
 }
 
@@ -70,12 +71,85 @@ footer {
 
 /*CELLPHONES MEDIA QUERY*/
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   header {
     display: flex;
     margin-bottom: 5%;
     padding: 3% 5%;
     text-align: right;
+  }
+
+  .webName {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+    margin-top: 4%;
+    font-size: 1em;
+    border-bottom: 1px solid #333;
+
+  }
+
+  .sloganName {
+
+    font-size: 0.7em;
+    color: #333;
+
+  }
+
+  .heroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fec01c;
+    padding: 3%;
+  }
+
+  .heroContainer img {
+    max-width: 90%;
+  }
+
+  .btnContainer {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+  .btn_base {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 4%;
+    padding: 1%;
+    max-height: 20vh;
+    background-color: #fec01c;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    cursor: pointer;
+
+
+  }
+
+  .svgIcon {
+    max-width: 30%;
+    display: block;
+  }
+
+  .svgIconA {
+
+    max-height: 73%;
+    display: block;
+
+  }
+
+  .logoIconSmall {
+    margin-top: 5%;
+    max-width: 30%;
+    margin-left: -39%;
+
   }
 
   .shield {
@@ -84,11 +158,17 @@ footer {
     margin-top: 7%;
   }
 
-  .headerText {
+  .shieldIndex {
+    max-width: 50%;
+    margin-left: -8.7%;
+    margin-top: 7%;
+  }
+
+  .headerTextIndex {
     display: flex;
     flex-direction: column;
     margin-left: 6%;
-    margin-top: 4%;
+    margin-top: 8%;
   }
 
   .headerTitle,
@@ -117,7 +197,8 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
+    align-content: flex-end;
+    margin-left: 3%;
 
   }
 
@@ -128,14 +209,25 @@ footer {
     transform: translateX(40%);
   }
 
+  .mediaIconA {
+    max-width: 20%;
+    transform: translateX(30%)
+  }
+
   .mediaIconSmall {
     max-width: 20%;
     margin-left: -20%;
     filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
     -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
     -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+  }
 
-
+  .mediaIconSmallA {
+    max-width: 16%;
+    margin-left: -20%;
+    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
   }
 
 
@@ -176,180 +268,134 @@ footer {
 
   }
 
-  footer {
-    background-color: #fec01c;
-  }
-
-  /*TABLETS MEDIA QUERY*/
-
-  @media screen and (min-width: 768px) {
-    body {
-      background-color: red;
-    }
-
-    header {
-      display: flex;
-      margin-bottom: 5%;
-      padding: 3% 5%;
-      text-align: right;
-    }
-
-    .shield {
-      max-width: 10%;
-      margin-left: -1%;
-      margin-top: 10%;
-    }
-
-    .headerText {
-      display: flex;
-      flex-direction: column;
-      margin-left: 6%;
-      margin-top: 4%;
-    }
-
-    .headerTitle,
-    .headerSubTitle {
-      font-family: 'Fira Sans Condensed', sans-serif;
-
-    }
-
-    .headerTitle {
-      font-size: 1.1em;
-    }
-
-    .headerSubTitle {
-      font-size: 0.9em;
-      letter-spacing: .12em;
-      margin-top: -7%;
-
-    }
-
-    .iconEach {
-      align-self: self-start;
-      max-width: 10%;
-    }
-
-    .headerEachPage {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-content: center;
-
-    }
-
-
-    .mediaIcon {
-      max-width: 30%;
-      align-self: flex-end;
-      transform: translateX(40%);
-    }
-
-    .mediaIconSmall {
-      max-width: 25%;
-      margin-left: -20%;
-      filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-      -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-      -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-
-
-    }
-
-
-    .headerEachPage h2 {
-      margin-right: 30%;
-
-      font-weight: 300;
-      transform: translateY(30%);
-      position: relative;
-      margin-left: 3%;
-      font-weight: 300;
-    }
-
-    table {
-      font-size: 0.9em;
-      color: #333;
-    }
-
-    thead,
-    th {
-      background-color: #fcbe32;
-      color: #000;
-      border: 1px solid #333;
-      padding: 1%;
-    }
-
-    td {
-      width: 40%;
-      height: 2rem;
-      border: 1px solid #ccc;
-      text-align: center;
-    }
-
-    .graphics {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-
-    }
-
-    footer {
-      background-color: #fec01c;
-    }
-
+  .mainTitle,
+  .totalTitle {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    text-align: center;
+    margin-bottom: 2%;
 
   }
 
+  .totalIncidents,
+  .twoMainIncidents {
+    width: 90%;
+    margin: 0 auto;
+    color: #333;
+    border: 3px solid #fcbe32;
+    padding: 1%;
+  }
+
+
+}
+
+
+/*DESKTOP MEDIA QUERY*/
 
   @media screen and (min-width: 992px) {
-    #headerText {
-      padding: 15px;
+    .headerIndex{
+      display: flex;
+
+    }
+    .heroContainer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      border: 3px solid #fec01c;
+      padding: 3%;
     }
 
-    .webName {
-      font-size: 35px;
-      margin: 0px;
+    .shieldIndex {
+      max-width: 30%;
+      margin-left: -0.9%;
+      
+    }
+
+    .logoIconSmall {
+      max-width: 20%;
+      margin-left: -25%;
+  
+    }
+
+    .headerTextIndex {
+      display: flex;
+      flex-direction: column;
+      align-content: flex-end;
+      margin-top: 3%;
+      margin-left: 6%;
     }
 
     .sloganName {
-      margin-top: 5px;
-      margin-bottom: 0px;
+      margin-top:-2%;
+      font-size: 1.1em;
+      color: #333;
     }
 
-    div#hero {
-      width: 100%;
-      height: 350px;
-      background: #ffffff url("imgs/travel-to-united-states-of-america.jpg") no-repeat left top;
-      background-size: cover;
-    }
-
-    .btnMedia {
-      display: inline-block;
-      background-color: #fec01c;
-      padding: 5px;
-      margin: 15px;
-      width: 100px !important;
-      height: 100px !important;
-      border-radius: 60px;
-      font-size: 20px;
-    }
-
-    .btn_panel {
-      width: 100%;
-      margin: 20px;
-      flex-direction: initial;
-      align-items: initial;
-
-    }
-
-    .btnContainer {
-      float: left;
-      width: 33%;
-      height: 130px;
-      align-items: center;
+    .acercaBtn{
+      color: #fec01c;
+      margin-top: 4.6%;
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      background-color: #333;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px;
+      cursor: pointer;
+      height: 3em;
+      padding: 0.5% 1.5%;
+      margin-left: 12%;
     }
 
+.heroContainer{
+  display: flex;
+
+  flex-direction: column;
+}
+
+  .herocontainer img{
+    width: 120%
+  }
+
+.btnContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 4%;
+
+}
+
+.btn_baseIndex{
+	margin: 1em;
+	width: 100%;
+	max-width: 200px;
+	text-align: center;
+ 
+
+}
+
+.svgIconIndex{
+ 
+  overflow: visible;
+  background-color: #fec01c;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+.btn_baseIndex img{
+  width: 50%;
+  height: 50%;
+  margin-top: 3%;
+  
+}
+
+.btn_baseIndex h4{
+  font-size: 1.2em;
+  
+}
 
   #headerText{
     padding: 15px;
