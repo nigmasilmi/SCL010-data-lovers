@@ -1,26 +1,13 @@
-/* Manejo de data 
+/*global loadData INJURIES Map Chart:true*/
 
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+/*eslint no-undef: "error"*/
+let dataModified = new Map();
 
-const example = () => {
-  return 'example';
-};
-
-window.example = example;*/
-
-//Haciendo lista de la Data
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-
- var dataModified = new Map();
- var container=[];
-
- function loadData(){
- let year=null;
+function loadData(){
   
-  for (let i=0; i<INJURIES.length; i++){
+    for (let i=0; i<INJURIES.length; i++){
   
-    year= INJURIES[i].Year.substring(0,4);
+  let year= INJURIES[i].Year.substring(0,4);
      
     //data para transporete aereo
     let air= 
@@ -43,19 +30,43 @@ window.example = example;*/
      {"Total_Injured_Persons_Passenger_Vessel":INJURIES[i].Total_Injured_Persons_Passenger_Vessel,
      "Total_Injured_Persons_Recreational_Boating":INJURIES[i].Total_Injured_Persons_Recreational_Boating,
      "Total_Injured_Persons_Water_Vessel_Related":INJURIES[i].Total_Injured_Persons_Water_Vessel_Related,
-      "Total_Injured_Persons_Water":INJURIES[i].Total_Injured_Persons_Water};33.
+     "Total_Injured_Persons_Water":INJURIES[i].Total_Injured_Persons_Water};
+         
+      dataModified.set(year,{water,air,land});
     
-     
-      dataModified.set(year,{
-        water,
-        air,
-        land
-      });
-     //container.push(dataModified);
-     // console.log(container);
-     //console.log(dataModified);
-     //console.log(year); 
   }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-
 }
 
+
+//Función que crea los gráficos para Incidencias Aéreas
+let airGraphGen = new Chart(airGraph, {
+  type:'bar', //puede ser bar, horizontalBar, pie, line, doughnut, radar, polarArea
+  data:{
+    labels : ['Ejemplo1', 'Ejemplo2', 'Ejemplo3', 'Ejemplo4', 'Ejemplo5', 'Ejemplo6'],
+    datasets : [{
+      label:'DatosEjemplo1',
+      data:[
+        134,
+        145,
+        101,
+        200,
+        170
+
+      ]
+    }]
+  },
+
+  options:{}
+
+
+});
+
+//airGraph 
+
+//Función que crea los gráficos para Incidencias Terrestres
+
+//landGraph
+
+//Función que crea los gráficos para Incidencias Acuáticas
+
+//waterGraph

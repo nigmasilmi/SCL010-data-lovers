@@ -8,6 +8,7 @@
   <title>Data Lovers - Incidencias Acuáticas USA</title>
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Questrial&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css" />
 </head>
 
 <body>
@@ -23,9 +24,9 @@
     <main role="main">
       <section>
         <div class="headerEachPage">
-          <img class="iconEach" src="imgs/backArrow-04.svg" alt="Back Arrow">
+            <div class="iconEach"><a href="index.html"><img src="imgs/backArrow-04.svg" alt="Back Arrow"></a></div>
           <img class="mediaIconA" src="imgs/acuatico-08.svg" alt="Ship Icon" />
-          <h2>ACUÁTICO</h2>
+          <h2 class="h2Acua">ACUÁTICO</h2>
         </div>
       </section>
       <h4 class="mainTitle">Total de Incidentes Acuáticos</h4>
@@ -42,9 +43,7 @@
         <h4 class="mainTitle">Incidentes Acuáticos</h4>
         <table>
           <thead>
-            <th>Tipo de Incidente</th>
-            <th>Ocurrencias</th>
-          </thead>
+            
           <tbody>
             <tr>
               <td>Incidente 1 (temporal ojo)</td>
@@ -60,7 +59,7 @@
 
       </section>
       <section class="graphics">
-        <img src="imgs/grafico_placeholder-06.jpg" alt="placeholder temporal">
+        <canvas id="grafAcuatico"></canvas>
       </section>
 
     </main>
@@ -70,9 +69,11 @@
     </footer>
     <!--div id root closing-->
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
   <script src="./data/injuries/injuries.js"></script>
-  <script src="data.js"></script>
   <script src="main.js"></script>
+  <script src="data.js"></script>
+  
 </body>
 
 </html>
