@@ -24,38 +24,6 @@ header {
   background-color: #fec01c;
 }
 
-h1 {
-  margin: 0px;
-}
-
-
-.btn_panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.btnMedia {
-  display: flex;
-  background-color: #fec01c;
-  padding: 3%;
-  margin: 5%;
-  width: 50%;
-  height: 20%;
-  border-radius: 4%;
-  font-size: 2em;
-}
-
-.btnMedia h2 {
-  font-size: 90%;
-
-}
-
-.icon a {
-  max-width: 50%;
-}
-
 footer {
   display: flex;
   justify-content: center;
@@ -72,12 +40,16 @@ footer {
 /*CELLPHONES MEDIA QUERY*/
 
 @media screen and (max-width: 991px) {
-  header {
+
+
+  header,
+  .headerIndex {
     display: flex;
     margin-bottom: 5%;
     padding: 3% 5%;
     text-align: right;
   }
+
 
   .webName {
     display: flex;
@@ -112,8 +84,6 @@ footer {
   .btnContainer {
     display: flex;
     flex-direction: column;
-
-
   }
 
   .btn_base {
@@ -129,20 +99,17 @@ footer {
     -moz-border-radius: 7px;
     border-radius: 7px;
     cursor: pointer;
-
-
   }
 
   .svgIcon {
     max-width: 30%;
     display: block;
+
   }
 
   .svgIconA {
-
     max-height: 73%;
     display: block;
-
   }
 
   .logoIconSmall {
@@ -156,12 +123,14 @@ footer {
     max-width: 30%;
     margin-left: -6.7%;
     margin-top: 7%;
+
   }
 
   .shieldIndex {
     max-width: 50%;
     margin-left: -8.7%;
     margin-top: 7%;
+
   }
 
   .headerTextIndex {
@@ -189,8 +158,15 @@ footer {
   }
 
   .iconEach {
-    align-self: self-start;
-    max-width: 10%;
+    width: 10%;
+    cursor: pointer;
+    padding-left: 2.7%;
+  }
+
+  .iconEachCar {
+    width: 40%;
+    cursor: pointer;
+    padding-left: 3%;
   }
 
   .headerEachPage {
@@ -198,21 +174,108 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-content: flex-end;
-    margin-left: 3%;
+
+  }
+
+  
+  .headerEachPage h2 {
+    margin-right: 30%;
+    font-weight: 300;
+    transform: translateY(30%);
+    position: relative;
+    padding-left: 6%;
+    font-weight: 300;
+  }
+
+  .btnContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .svgIconIndex {
+
+    overflow: visible;
+    background-color: #fec01c;
+    -webkit-border-radius: 3%;
+    -moz-border-radius: 3%;
+    border-radius: 3%;
+    cursor: pointer;
+    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
+    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
+    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
+    transition: filter 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 
   }
 
 
-  .mediaIcon {
+  .svgIconIndex:hover {
+    background-color: #ccc;
+    filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
+    -webkit-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
+    -moz-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
+
+  }
+
+
+  .acercaBtn {
+    color: #fec01c;
+    margin-top: -8.7%;
+    margin-bottom: 7%;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    justify-content: center;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 1.3em;
+    font-size: 0.9em;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    transition: border-radius 0.5s ease-in-out;
+    transition: margin-left 0.5s ease-in-out;
+
+  }
+
+  .acercaBtn:hover {
+    opacity: 0.9;
+    border-radius: 1px;
+    margin-left: 30%;
+    font-size: 0.4em;
+  }
+
+  .acercaBtn h4 {
+    margin-left: 65%;
+  }
+
+
+  .btn_baseIndex {
+    margin-top: -7%;
+  }
+
+  .btn_baseIndex img {
     max-width: 30%;
-    align-self: flex-end;
-    transform: translateX(40%);
+    max-height: auto;
+    margin-top: 3%;
+    margin-left: 25%;
+    padding: 4% 13% 4% 4%;
+
   }
 
-  .mediaIconA {
-    max-width: 20%;
-    transform: translateX(30%)
+  .btn_baseIndex h4 {
+    font-size: 1.2em;
+    margin-left: 50%;
+
   }
+
+
+  .mediaIcon, .mediaIconA, .mediaIconC, .mediaIconP {
+   display:none;
+  }
+
+  
 
   .mediaIconSmall {
     max-width: 20%;
@@ -230,36 +293,6 @@ footer {
     -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
   }
 
-
-  .headerEachPage h2 {
-    margin-right: 30%;
-
-    font-weight: 300;
-    transform: translateY(30%);
-    position: relative;
-    margin-left: 3%;
-    font-weight: 300;
-  }
-
-  table {
-    font-size: 0.9em;
-    color: #333;
-  }
-
-  thead,
-  th {
-    background-color: #fcbe32;
-    color: #000;
-    border: 1px solid #333;
-    padding: 1%;
-  }
-
-  td {
-    width: 40%;
-    height: 2rem;
-    border: 1px solid #ccc;
-    text-align: center;
-  }
 
   .graphics {
     display: flex;
@@ -289,177 +322,297 @@ footer {
 }
 
 
+
 /*DESKTOP MEDIA QUERY*/
 
-  @media screen and (min-width: 992px) {
-    .headerIndex{
-      display: flex;
+@media screen and (min-width: 992px) {
 
-    }
-    .heroContainer {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      border: 3px solid #fec01c;
-      padding: 3%;
-    }
-
-    .shieldIndex {
-      max-width: 30%;
-      margin-left: -0.9%;
-      
-    }
-
-    .logoIconSmall {
-      max-width: 20%;
-      margin-left: -25%;
-  
-    }
-
-    .headerTextIndex {
-      display: flex;
-      flex-direction: column;
-      align-content: flex-end;
-      margin-top: 3%;
-      margin-left: 6%;
-    }
-
-    .sloganName {
-      margin-top:-2%;
-      font-size: 1.1em;
-      color: #333;
-    }
-
-    .acercaBtn{
-      color: #fec01c;
-      margin-top: 4.6%;
-      display: flex;
-      align-items: center;
-      background-color: #333;
-      -webkit-border-radius: 7px;
-      -moz-border-radius: 7px;
-      border-radius: 7px;
-      cursor: pointer;
-      height: 3em;
-      padding: 0.5% 1.5%;
-      margin-left: 12%;
-    }
-
-.heroContainer{
-  display: flex;
-
-  flex-direction: column;
-}
-
-  .herocontainer img{
-    width: 120%
-  }
-
-.btnContainer{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-content: center;
-  padding: 4%;
-
-}
-
-    div#hero {
-      width: 100%;
-      height: 350px;
-      background: #ffffff url("imgs/travel-to-united-states-of-america.jpg") no-repeat left top;
-      background-size: cover;
-    }
-    .heroContainer{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .heroContainer img{
-     max-width: 40%;
-    }
-
-
-    .btn_panel {
-      display: flex;
-      width: 100%;
-      justify-content: space-around;
-      background-color: red;
-      border-radius: 50%;
-
-    }
-
-    .mediaIconA {
-      max-width: 20%;
-      transform: translateX(30%)
-    }
-
-    .btn_panel img {
-      width: 30%;
-    }
-
-    .btnContainer {
-      width: 33%;
-      height: 130px;
-      align-items: center;
-      display: flex;
-
-    }
-
-.btn_baseIndex h4{
-  font-size: 1.2em;
-  
-}
-
-  #headerText{
-    padding: 15px;
-  }
-
-  .webName{
-    font-size: 35px;
-    margin: 0px;  
-  }
-
-  .sloganName{
-    margin-top: 5px;
-    margin-bottom: 0px;
-  }
-
-  div#hero {
-    width: 100%;
-    height: 350px;
-    background: #ffffff url("imgs/travel-to-united-states-of-america.jpg") no-repeat left top;
-    background-size: cover;
-  }
-
-  .btnMedia {
-    display: inline-block;
-    background-color: #fec01c;
-    padding: 5px;
-    margin: 15px;
-    width: 100px !important;
-    height: 100px !important;
-    border-radius: 60px;
-    font-size: 20px;
-  }
-
-  .btn_panel{
-    width: 100%;
-    margin: 20px;
-    flex-direction: initial;
-    align-items: initial;
-
-  }
-
-  .btnContainer{
-    float: left;
-    width: 33%;
-    height: 130px;
-    align-items: center;
+  header {
     display: flex;
+    height: 20%;
+    text-align: right;
+  }
+
+  .headerIndex {
+    display: flex;
+    margin-bottom: 5%;
+    padding: 3% 5%;
+    text-align: right;
+  }
+
+
+  .mediaIconSmallA {
+    max-width: 16%;
+    margin-left: -20%;
+    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+  }
+
+
+  .mediaIconSmall {
+    max-width: 20%;
+    margin-left: -20%;
+    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
+  }
+
+
+  .headerTitle,
+  .headerSubTitle {
+    font-family: 'Fira Sans Condensed', sans-serif;
+
+  }
+
+  .headerTitle {
+    font-size: 2em;
+  }
+
+
+  .headerSubTitle {
+    font-size: 1.5em;
+    letter-spacing: .12em;
+    margin-top: -7%;
+
+  }
+
+  .iconEach {
+    width: 10%;
+    cursor: pointer;
+    padding-left: 2.7%;
+  }
+
+
+
+  .mediaIconP {
+    max-width: 27%;
+    margin-right:-12.1%;
+    
+  }
+
+  .mediaIconC{
+    max-width: 27%;
+    margin: 3% -3% 0 -4%;
+    padding-bottom: 1.5%; 
+  }
+
+  .mediaIconA {
+    max-width: 20%;
+    position: relative;
+    left: 4%;
+}
+ 
+
+  .heroContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid #fec01c;
+    padding: 3%;
+  }
+
+  .shieldIndex {
+    max-width: 30%;
+    margin-left: -0.9%;
+
+  }
+
+  .logoIconSmall {
+    max-width: 20%;
+    margin-left: -25%;
+
+  }
+
+
+  .shield {
+    max-width: 30%;
+    margin-left: -6.7%;
+    margin-top: 7%;
+
+
+  }
+
+  .headerEachPage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .headerEachPage h2{
+    position: relative;
+    margin-top: 10%;
+    margin-right: 0%;
+    background-color: #fec01c;
+    padding: 1% 1% 1% 45%;
+    
+  }
+
+
+  .headerTextIndex {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    margin-top: 3%;
+    margin-left: 6%;
+  }
+
+  .headerText {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    margin-top: 10%;
+    margin-left: 6%;
+  }
+
+  .sloganName {
+    margin-top: -2%;
+    font-size: 1.1em;
+    color: #333;
+  }
+
+  .acercaBtn {
+    color: #fec01c;
+    margin-top: -2.7%;
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    justify-content: flex-end;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    cursor: pointer;
+    height: 1.3em;
+    padding: 0.5% 1.5%;
+    margin-left: 12%;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    transition: border-radius 0.5s ease-in-out;
+    transition: margin-left 0.5s ease-in-out;
+
+  }
+
+  .acercaBtn:hover {
+    opacity: 0.9;
+    border-radius: 1px;
+    margin-left: 70%;
+  }
+
+  .acercaBtn h4 {
+    margin-right: 15%;
+    word-spacing: 0.1em;
+  }
+
+  .heroContainer {
+    display: flex;
+
     flex-direction: column;
   }
 
+
+  .herocontainer img {
+    width: 120%
+  }
+
+  .btnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 4%;
+
+  }
+
+  .btn_baseIndex {
+    margin: 1em;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+
+
+  }
+
+  .svgIconIndex {
+    position: relative;
+    overflow: visible;
+    background-color: #fec01c;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
+    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
+    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
+    transition: filter 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+
+  }
+
+
+  .svgIconIndex:hover {
+    background-color: #ccc;
+    filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
+    -webkit-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
+    -moz-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
+
+  }
+
+
+  .btn_baseIndex img {
+    width: 50%;
+    height: 50%;
+    margin-top: 3%;
+    padding: 4%;
+
+  }
+
+  .btn_baseIndex h4 {
+    font-size: 1.2em;
+
+  }
+
+  .tables{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  
+  .totalIncidents,
+  .twoMainIncidents {
+    width: 90%;
+    margin: 0 auto;
+    color: #333;
+    border: 3px solid #fcbe32;
+    padding: 1%;
+  }
+
+  .graphics {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+  }
+
+  .mainTitle,
+  .totalTitle {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    text-align: center;
+    margin-bottom: 2%;
+
+  }
+
+  .totalIncidents,
+  .twoMainIncidents {
+    width: 90%;
+    margin: 0 auto;
+    color: #333;
+    border: 3px solid #fcbe32;
+    padding: 1%;
+  }
+
+
 }
+

@@ -8,6 +8,7 @@
   <title>Data Lovers - Incidencias Aéreas USA</title>
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Questrial&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css" />
 </head>
 
 <body id="air">
@@ -23,8 +24,8 @@
     <main role="main">
       <section>
         <div class="headerEachPage">
-          <img class="iconEach" src="imgs/backArrow-04.svg" alt="Back Arrow">
-          <img class="mediaIcon" src="imgs/plane-03.svg" alt="Plane Icon" />
+          <div class="iconEach"><a href="index.html"><img src="imgs/backArrow-04.svg" alt="Back Arrow"></a></div>
+          <img class="mediaIconP" src="imgs/plane-03.svg" alt="Plane Icon" />
           <h2>AÉREO</h2>
         </div>
       </section>
@@ -46,19 +47,20 @@
             <option value="1996,1997,1998,1999,2000">2000-1996</option>
             <option value= "1991,1992,1993,1994,1995">1995-1991</option>
           </select>
-      </div>
+      </div> 
       <section class="tables">
+
       <h4 class="mainTitle">Incidentes Aéreos</h4>
       <div>
       <button id="clickme">mostrar</button>
        </div>
          <div id ="container_datos">
        </div>
-  
+      
       </section>
 
       <section class="graphics">
-        <img src="imgs/grafico_placeholder-06.jpg" alt="placeholder temporal">
+        <canvas id="grafAereo"></canvas>
       </section>
 
     </main>
@@ -68,10 +70,14 @@
     </footer>
     <!--div id root closing-->
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
   <script src="./data/injuries/injuries.js"></script>
-  <script src="data.js"></script>
   <script src="main.js"></script>
+
   <script>showTable();</script>
+
+  <script src="data.js"></script>
+  
 </body>
 
 </html>
