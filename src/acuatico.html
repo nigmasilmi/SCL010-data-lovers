@@ -24,13 +24,13 @@
     <main role="main">
       <section>
         <div class="headerEachPage">
-            <div class="iconEach"><a href="index.html"><img src="imgs/backArrow-04.svg" alt="Back Arrow"></a></div>
+          <div class="iconEach"><a href="index.html"><img src="imgs/backArrow-04.svg" alt="Back Arrow"></a></div>
           <img class="mediaIconA" src="imgs/acuatico-08.svg" alt="Ship Icon" />
           <h2 class="h2Acua">ACUÁTICO</h2>
         </div>
       </section>
       <h4 class="mainTitle">Total de Incidentes Acuáticos</h4>
-      <div id="totalWaterIncidents" class="totalIncidents"> 
+      <div id="totalWaterIncidents" class="totalIncidents">
         <p>Aquí el valor calculado en lugar de esto</p>
       </div>
       <h4 class="mainTitle">Los dos incidentes acuáticos más recurrentes</h4>
@@ -38,48 +38,24 @@
         <p>Aquí el primero en lugar de esto</p>
         <p>Aquí el segundo en lugar de esto</p>
       </div>
-<<<<<<< master
-      <div id="entradaFecha">
-          <h3>Ingrese el rango de años a evaluar</h3>
-          <select id="selectYear">
-              <option value="2011,2012,2013,2014,2015,2016" selected>2016-2011</option>
-              <option value="2006,2007,2008,2003,2010">2010-2006</option>
-              <option value="2001,2002,2003,2004,2005">2005-2001</option>
-              <option value="1996,1997,1998,1999,2000">2000-1996</option>
-              <option value= "1991,1992,1993,1994,1995">1995-1991</option>
-            </select>
-        </div>
-        <section class="tables">
+      <div id="P">
+        <h3>Ingrese el rango de años a evaluar</h3>
+        <select id="selectYear">
+          <option value="2011,2012,2013,2014,2015,2016" selected>2016-2011</option>
+          <option value="2006,2007,2008,2003,2010">2010-2006</option>
+          <option value="2001,2002,2003,2004,2005">2005-2001</option>
+          <option value="1996,1997,1998,1999,2000">2000-1996</option>
+          <option value="1991,1992,1993,1994,1995">1995-1991</option>
+        </select>
+      </div>
+      <section class="tables">
         <h4 class="mainTitle">Incidentes Acuaticos</h4>
         <div>
-        <button id="clickme">mostrar</button>
-         </div>
-           <div id ="container_datos">
-         </div>
-    
-        </section>
-=======
-      <section class="tables">
-
-        <h4 class="mainTitle">Incidentes Acuáticos</h4>
-        <table>
-          <thead>
-            
-          <tbody>
-            <tr>
-              <td>Incidente 1 (temporal ojo)</td>
-              <td>Valor 1 (temporal ojo)</td>
-            </tr>
-            <tr>
-              <td>Incidente 1 (temporal ojo)</td>
-              <td>Valor 1 (temporal ojo)</td>
-            </tr>
-          </tbody>
-          <tfoot>Fuente: tal tal tal</tfoot>
-        </table>
->>>>>>> master
-
+          <button id="clickme">mostrar</button>
+        </div>
+        <div id="container_datos"></div>
       </section>
+
       <section class="graphics">
         <canvas id="grafAcuatico"></canvas>
       </section>
@@ -87,19 +63,15 @@
     </main>
 
     <footer>
-        © Caribbean Data Lovers 2019
+      © Caribbean Data Lovers 2019
     </footer>
-    <!--div id root closing-->
-  </div>
+    <!--div id root closing--></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
   <script src="./data/injuries/injuries.js"></script>
-  <script src="main.js"></script>
-<<<<<<< master
-  <script>showTable();</script>
-=======
   <script src="data.js"></script>
-  
->>>>>>> master
+  <script src="main.js"></script>
+  <script> showTable();</script>
+
 </body>
 
 </html>
