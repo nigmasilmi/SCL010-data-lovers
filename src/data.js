@@ -1,3 +1,7 @@
+/*global loadData INJURIES Map Chart:true*/
+
+/*eslint no-undef: "error"*/
+
 let dataModified = new Map();
 
 function loadData() {
@@ -5,6 +9,7 @@ function loadData() {
   for (let i = 0; i < INJURIES.length; i++) {
 
     let year = INJURIES[i].Year.substring(0, 4);
+
 
     //data para transporete aereo
     let air = [{
@@ -57,23 +62,23 @@ function loadData() {
         "value": INJURIES[i].Total_Injured_Persons_Rail
       }
     ];
-    //data para transporete terrestre
-    let water = [{
-        "name": "Total_Injured_Persons_Passenger_Vessel",
-        "nameSpanish": "Total de personas lesionadas ocupantes de embarcaciones",
-        "value": INJURIES[i].Total_Injured_Persons_Passenger_Vessel
-      },
-      {
-        "name": "Total_Injured_Persons_Recreational_Boating",
-        "nameSpanish": "Total de personas lesionadas en embarcaciones de recreo",
-        "value": INJURIES[i].Total_Injured_Persons_Recreational_Boating
-      },
-      {
-        "name": "Total_Injured_Persons_Water_Vessel_Related",
-        "nameSpanish": "Total de personas lesionadas en embarcaciones de recreo",
-        "value": INJURIES[i].Total_Injured_Persons_Water_Vessel_Related
-      },
+    //data para transporte agua
 
+    let water = [{
+        "name": "Total_Injured_Persons_Motorcyclists",
+        "nameSpanish": "Total de personas lesionadas en motocicleta",
+        "value": INJURIES[i].Total_Injured_Persons_Motorcyclists
+      },
+      {
+        "name": "Total_Injured_Persons_Passenger_Car_Occupants",
+        "nameSpanish": "Total de personas lesionadas ocupamtes de un carro",
+        "value": INJURIES[i].Total_Injured_Persons_Passenger_Car_Occupants
+      },
+      {
+        "name": "Total_Injured_Persons_Bus_Occupants",
+        "nameSpanish": "Total de personas lesionadas ocupamtes de un bus",
+        "value": INJURIES[i].Total_Injured_Persons_Bus_Occupants
+      },
       {
         "name": "Total_Injured_Persons_Water",
         "nameSpanish": "Total de personas lesionadas en embarcaciones de recreo",
@@ -89,6 +94,13 @@ function loadData() {
     });
   }
 }
+
+dataModified.set(year, {
+  water,
+  air,
+  land
+});
+
 
 //Función que crea los gráficos para Incidencias Aéreas
 let airGraphGen = new Chart(airGraph, {
