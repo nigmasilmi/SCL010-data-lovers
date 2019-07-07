@@ -1,19 +1,3 @@
-/*  Colors  
-    principal: #fec01c
-    gris claro: #626875
-    gris oscuro: #333333
-    negro: #111111
-    blanco: #ffffff
-
-*/
-
-/* Fonts
-font-family: 'Questrial', sans-serif;
-
-font-family: 'Fira Sans Condensed', sans-serif;
-*/
-
-/* GENERIC STYLES */
 
 body {
   font-family: 'Questrial', sans-serif;
@@ -22,597 +6,216 @@ body {
 
 header {
   background-color: #fec01c;
+  display: flex;
+  justify-content: flex-start;
+  max-height: 20vh;
+}
+
+.brandBlock {
+  display: flex;
+  flex: 2;
+
+}
+
+.brandBlock img {
+  width: 20vw;
+  margin-left: -4vw;
+
+}
+
+.headerText {
+  flex: 4;
+  align-self: flex-end;
+  margin-left: -10vw;
+
+}
+
+.heroContainer {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+}
+
+.btnsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 3%;
+}
+
+
+.svgIcon {
+  padding: 4%;
+  background-color: #fec01c;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
+  -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
+  -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
+  transition: filter 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.svgIcon:hover {
+  background-color: #ccc;
+  filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
+  -webkit-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
+  -moz-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
+
+}
+
+.btnContainer h4 {
+  text-align: center;
+}
+.btnContainerRes{
+  display: none;
+}
+
+.totalIncidents,
+.twoMainIncidents {
+  width: 90%;
+  margin: 0 auto;
+  color: #333;
+  border: 3px solid #fcbe32;
+  padding: 1%;
+}
+
+.totalTitle,
+.mainTitle {
+  font-weight: 400;
+  font-size: 1.6em;
+  text-align: center;
+
+}
+
+.totalIncidents p,
+.twoMainIncidents p {
+  border-bottom: 1.5px solid #333;
+}
+
+.dateInputClass {
+  font-weight: 400;
+  font-size: 1.3em;
+  text-align: center;
+
+}
+
+.selectYearClass {
+  background-color: #fcbe32;
+  border: 1.5px solid #333;
+  font-size: 0.8em;
+
+}
+
+option {
+  background-color: #333;
+  color: white;
+}
+
+.clickmeClass {
+  background-color: #fec01c;
+  border: 2px solid #fec01c;
+  padding: 0.5%;
+  cursor: pointer;
+  font-size: 0.8em;
+  margin: 2%;
+  transition: border .5s ease-in-out;
+}
+
+
+.clickmeClass:hover {
+
+  border: 2px groove #333;
 }
 
 footer {
   display: flex;
   justify-content: center;
-  height: 40%;
+  height: 20%;
   width: 100%;
-  padding: 3%;
   text-align: center;
   background-color: #fec01c;
 }
 
+.table {
+  display: flex;
+  max-width: 70%;
 
+}
 
+.tables td {
+  border: 1px solid #333;
+  width: 5%;
+  text-align-last: center;
+}
 
 /*CELLPHONES MEDIA QUERY*/
+@media screen and (max-width: 500px) {
+  .headerText h1{
+    font-size:1.3em;
+    
+  }
+  .headerText h2{
+    font-size: 1em;
+    
+  }
+}
+
 
 @media screen and (max-width: 991px) {
 
-
-  header,
-  .headerIndex {
-    display: flex;
-    margin-bottom: 5%;
-    padding: 3% 5%;
-    text-align: right;
+  .brandBlock img {
+    width: 30vw;
+    margin-left: -4vw;
+  
   }
+.headerText{
+  font-size: 0.8em;
 
-
-  .webName {
-    display: flex;
-    flex-direction: column;
-    margin-left: 6%;
-    margin-top: 4%;
-    font-size: 1em;
-    border-bottom: 1px solid #333;
-
-  }
-
-  .sloganName {
-
-    font-size: 0.7em;
-    color: #333;
-
-  }
-
-  .heroContainer {
+}
+  .btnsContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    border: 3px solid #fec01c;
+    align-items: center;
     padding: 3%;
   }
 
-  .heroContainer img {
-    max-width: 90%;
-  }
-
-  .btnContainer {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .btn_base {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  .btnContainerRes {
+   display: flex;
+    width: 70%;
+    justify-content: space-around;
+    text-align: center;
     align-items: center;
-    margin: 4%;
-    padding: 1%;
-    max-height: 20vh;
-    background-color: #fec01c;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-    cursor: pointer;
-  }
-
-  .svgIcon {
-    max-width: 30%;
-    display: block;
-
-  }
-
-  .svgIconA {
-    max-height: 73%;
-    display: block;
-  }
-
-  .logoIconSmall {
-    margin-top: 5%;
-    max-width: 30%;
-    margin-left: -39%;
-
-  }
-
-  .shield {
-    max-width: 30%;
-    margin-left: -6.7%;
-    margin-top: 7%;
-
-  }
-
-  .shieldIndex {
-    max-width: 50%;
-    margin-left: -8.7%;
-    margin-top: 7%;
-
-  }
-
-  .headerTextIndex {
-    display: flex;
-    flex-direction: column;
-    margin-left: 6%;
-    margin-top: 8%;
-  }
-
-  .headerTitle,
-  .headerSubTitle {
-    font-family: 'Fira Sans Condensed', sans-serif;
-
-  }
-
-  .headerTitle {
-    font-size: 1.1em;
-  }
-
-  .headerSubTitle {
-    font-size: 0.9em;
-    letter-spacing: .12em;
-    margin-top: -7%;
-
-  }
-
-  .iconEach {
-    width: 10%;
-    cursor: pointer;
-    padding-left: 2.7%;
-  }
-
-  .iconEachCar {
-    width: 40%;
-    cursor: pointer;
-    padding-left: 3%;
-  }
-
-  .headerEachPage {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: flex-end;
-
-  }
-
-  
-  .headerEachPage h2 {
-    margin-right: 30%;
-    font-weight: 300;
-    transform: translateY(30%);
-    position: relative;
-    padding-left: 6%;
-    font-weight: 300;
-  }
-
-  .btnContainer {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .svgIconIndex {
-
-    overflow: visible;
     background-color: #fec01c;
     -webkit-border-radius: 3%;
     -moz-border-radius: 3%;
     border-radius: 3%;
+    margin:2%;
     cursor: pointer;
     filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
     -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
     -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
     transition: filter 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
-
   }
-
-
-  .svgIconIndex:hover {
+  
+  .btnContainerRes:hover {
     background-color: #ccc;
     filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
     -webkit-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
     -moz-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
-
-  }
-
-
-  .acercaBtn {
-    color: #fec01c;
-    margin-top: -8.7%;
-    margin-bottom: 7%;
-    display: flex;
-    align-items: center;
-    background-color: #333;
-    justify-content: center;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-    cursor: pointer;
-    height: 1.3em;
-    font-size: 0.9em;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    transition: border-radius 0.5s ease-in-out;
-    transition: margin-left 0.5s ease-in-out;
-
-  }
-
-  .acercaBtn:hover {
-    opacity: 0.9;
-    border-radius: 1px;
-    margin-left: 30%;
-    font-size: 0.4em;
-  }
-
-  .acercaBtn h4 {
-    margin-left: 65%;
-  }
-
-
-  .btn_baseIndex {
-    margin-top: -7%;
-  }
-
-  .btn_baseIndex img {
-    max-width: 30%;
-    max-height: auto;
-    margin-top: 3%;
-    margin-left: 25%;
-    padding: 4% 13% 4% 4%;
-
-  }
-
-  .btn_baseIndex h4 {
-    font-size: 1.2em;
-    margin-left: 50%;
-
-  }
-
-
-  .mediaIcon, .mediaIconA, .mediaIconC, .mediaIconP {
-   display:none;
-  }
-
-  
-
-  .mediaIconSmall {
-    max-width: 20%;
-    margin-left: -20%;
-    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-  }
-
-  .mediaIconSmallA {
-    max-width: 16%;
-    margin-left: -20%;
-    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-  }
-
-
-  .graphics {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-  }
-
-  .mainTitle,
-  .totalTitle {
-    font-family: 'Fira Sans Condensed', sans-serif;
-    text-align: center;
-    margin-bottom: 2%;
-
-  }
-
-  .totalIncidents,
-  .twoMainIncidents {
-    width: 90%;
-    margin: 0 auto;
-    color: #333;
-    border: 3px solid #fcbe32;
-    padding: 1%;
-  }
-
-
-}
-
-
-
-/*DESKTOP MEDIA QUERY*/
-
-@media screen and (min-width: 992px) {
-
-  header {
-    display: flex;
-    height: 20%;
-    text-align: right;
-  }
-
-  .headerIndex {
-    display: flex;
-    margin-bottom: 5%;
-    padding: 3% 5%;
-    text-align: right;
-  }
-
-
-  .mediaIconSmallA {
-    max-width: 16%;
-    margin-left: -20%;
-    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-  }
-
-
-  .mediaIconSmall {
-    max-width: 20%;
-    margin-left: -20%;
-    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.55));
-  }
-
-
-  .headerTitle,
-  .headerSubTitle {
-    font-family: 'Fira Sans Condensed', sans-serif;
-
-  }
-
-  .headerTitle {
-    font-size: 2em;
-  }
-
-
-  .headerSubTitle {
-    font-size: 1.5em;
-    letter-spacing: .12em;
-    margin-top: -7%;
-
-  }
-
-  .iconEach {
-    width: 10%;
-    cursor: pointer;
-    padding-left: 2.7%;
-  }
-
-
-
-  .mediaIconP {
-    max-width: 27%;
-    margin-right:-12.1%;
-    
-  }
-
-  .mediaIconC{
-    max-width: 27%;
-    margin: 3% -3% 0 -4%;
-    padding-bottom: 1.5%; 
-  }
-
-  .mediaIconA {
-    max-width: 20%;
-    position: relative;
-    left: 4%;
-}
  
-
-  .heroContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    border: 3px solid #fec01c;
-    padding: 3%;
+   }
+  .btnContainer{
+    display: none;
+   
   }
 
-  .shieldIndex {
-    max-width: 30%;
-    margin-left: -0.9%;
-
-  }
-
-  .logoIconSmall {
-    max-width: 20%;
-    margin-left: -25%;
-
-  }
-
-
-  .shield {
-    max-width: 30%;
-    margin-left: -6.7%;
-    margin-top: 7%;
-
-
-  }
-
-  .headerEachPage{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .headerEachPage h2{
-    position: relative;
-    margin-top: 10%;
-    margin-right: 0%;
-    background-color: #fec01c;
-    padding: 1% 1% 1% 45%;
-    
-  }
-
-
-  .headerTextIndex {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    margin-top: 3%;
-    margin-left: 6%;
-  }
-
-  .headerText {
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    margin-top: 10%;
-    margin-left: 6%;
-  }
-
-  .sloganName {
-    margin-top: -2%;
-    font-size: 1.1em;
-    color: #333;
-  }
-
-  .acercaBtn {
-    color: #fec01c;
-    margin-top: -2.7%;
-    display: flex;
-    align-items: center;
-    background-color: #333;
-    justify-content: flex-end;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-    cursor: pointer;
-    height: 1.3em;
-    padding: 0.5% 1.5%;
-    margin-left: 12%;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    transition: border-radius 0.5s ease-in-out;
-    transition: margin-left 0.5s ease-in-out;
-
-  }
-
-  .acercaBtn:hover {
-    opacity: 0.9;
-    border-radius: 1px;
-    margin-left: 70%;
-  }
-
-  .acercaBtn h4 {
-    margin-right: 15%;
-    word-spacing: 0.1em;
-  }
-
-  .heroContainer {
-    display: flex;
-
-    flex-direction: column;
-  }
-
-
-  .herocontainer img {
-    width: 120%
-  }
-
-  .btnContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-content: center;
-    padding: 4%;
-
-  }
-
-  .btn_baseIndex {
-    margin: 1em;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-
-
-  }
-
-  .svgIconIndex {
-    position: relative;
-    overflow: visible;
-    background-color: #fec01c;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    cursor: pointer;
-    filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
-    -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
-    -moz-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
-    transition: filter 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
-
-  }
-
-
-  .svgIconIndex:hover {
-    background-color: #ccc;
-    filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
-    -webkit-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
-    -moz-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
-
-  }
-
-
-  .btn_baseIndex img {
-    width: 50%;
-    height: 50%;
-    margin-top: 3%;
-    padding: 4%;
-
-  }
-
-  .btn_baseIndex h4 {
-    font-size: 1.2em;
-
-  }
-
-  .tables{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
+ 
   
-  
-  .totalIncidents,
-  .twoMainIncidents {
-    width: 90%;
-    margin: 0 auto;
-    color: #333;
-    border: 3px solid #fcbe32;
-    padding: 1%;
-  }
-
-  .graphics {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-  }
-
-  .mainTitle,
-  .totalTitle {
-    font-family: 'Fira Sans Condensed', sans-serif;
-    text-align: center;
-    margin-bottom: 2%;
-
-  }
-
-  .totalIncidents,
-  .twoMainIncidents {
-    width: 90%;
-    margin: 0 auto;
-    color: #333;
-    border: 3px solid #fcbe32;
-    padding: 1%;
-  }
-
 
 }
-

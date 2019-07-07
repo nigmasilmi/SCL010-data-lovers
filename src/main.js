@@ -1,4 +1,7 @@
 
+/*global loadData INJURIES Map Chart dataModified:true*/
+
+/*eslint no-undef: "error"*/
 
 
 const containerDatos = document.getElementById("container_datos");
