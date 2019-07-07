@@ -1,4 +1,7 @@
-
+a, a:hover, a:visited{
+  text-decoration: none;
+  color: black;
+}
 body {
   font-family: 'Questrial', sans-serif;
   margin: 0px;
@@ -202,7 +205,14 @@ footer {
     transition: filter 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
   }
-  
+
+
+  .insidebtnConRes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .btnContainerRes:hover {
     background-color: #ccc;
     filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
