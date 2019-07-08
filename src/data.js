@@ -14,51 +14,51 @@ function loadData() {
     //data para transporete aereo
     let air = [{
         "name": "Total_Injured_Persons_Air",
-        "nameSpanish": "Transporte aereo",
+        "nameSpanish": "Durante el vuelo",
         "value": INJURIES[i].Total_Injured_Persons_Air
       },
       {
         "name": "Total_Injured_Persons_On_Demand_Air_Taxi",
-        "nameSpanish": "Aviacion tipo taxis",
+        "nameSpanish": "Taxis aéreos",
         "value": INJURIES[i].Total_Injured_Persons_On_Demand_Air_Taxi
       },
       {
         "name": "Total_Injured_Persons_US_Air_Carrier",
-        "nameSpanish": "Aerolínea Estadounidense",
+        "nameSpanish": "Aerolíneas nacionales",
         "value": INJURIES[i].Total_Injured_Persons_US_Air_Carrier
       },
       {
         "name": "Total_Injured_Persons_General_Aviation",
-        "nameSpanish": "Aerolínea no Estadounidense",
+        "nameSpanish": "Aerolíneas internacionales",
         "value": INJURIES[i].Total_Injured_Persons_General_Aviation
       }
     ];
 
-    //data para transporete terrestre
+    //data para transporte terrestre
     let land = [{
         "name": "Total_Injured_Persons_Pedalcyclists",
-        "nameSpanish": "Bicicleta",
+        "nameSpanish": "Bicicletas",
         "value": INJURIES[i].Total_Injured_Persons_Pedalcyclists
       },
 
       {
         "name": "Total_Injured_Persons_Motorcyclists",
-        "nameSpanish": "Motocicleta",
+        "nameSpanish": "Motocicletas",
         "value": INJURIES[i].Total_Injured_Persons_Motorcyclists
       },
       {
         "name": "Total_Injured_Persons_Passenger_Car_Occupants",
-        "nameSpanish": "Carro",
+        "nameSpanish": "Automóviles",
         "value": INJURIES[i].Total_Injured_Persons_Passenger_Car_Occupants
       },
       {
         "name": "Total_Injured_Persons_Bus_Occupants",
-        "nameSpanish": "Bus",
+        "nameSpanish": "Buses",
         "value": INJURIES[i].Total_Injured_Persons_Bus_Occupants
       },
       {
         "name": "Total_Injured_Persons_Rail",
-        "nameSpanish": "Tren",
+        "nameSpanish": "Trenes",
         "value": INJURIES[i].Total_Injured_Persons_Rail
       }
     ];
@@ -66,18 +66,20 @@ function loadData() {
 
     let water = [{
         "name": "Total_Injured_Persons_Passenger_Vessel",
-        "nameSpanish": "Embarcaciones",
+        "nameSpanish": "Embarcaciones de carga",
         "value": INJURIES[i].Total_Injured_Persons_Passenger_Vessel
       },
-      {
-        "name": "Total_Injured_Persons_Recreational_Boating",
-        "nameSpanish": "Embarcaciones de recreo",
-        "value": INJURIES[i].Total_Injured_Persons_Recreational_Boating
-      },
+
       {
         "name": "Total_Injured_Persons_Water_Vessel_Related",
-        "nameSpanish": "Embarcaciones de recreo",
+        "nameSpanish": "Relacionadas con embarcaciones de carga",
         "value": INJURIES[i].Total_Injured_Persons_Water_Vessel_Related
+      },
+
+      {
+        "name": "Total_Injured_Persons_Recreational_Boating",
+        "nameSpanish": "Botes de recreo",
+        "value": INJURIES[i].Total_Injured_Persons_Recreational_Boating
       },
 
       {
