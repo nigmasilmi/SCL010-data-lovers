@@ -13,33 +13,32 @@
 
 <body id="water">
   <div id="root">
-    <header>
-      <img class="shield" src="imgs/punta-05.svg" alt="ornamentación">
-      <img class="mediaIconSmallA" src="imgs/acuatico-08.svg" alt="Ship Icon" />
+    <header class="header">
+      <div class="brandBlock">
+        <img src="imgs/DataLovers-14.svg" alt="Logo" />
+      </div>
       <div class="headerText">
-        <h2 class="headerTitle">ESTADÍSTICAS DE INCIDENTES</h2>
-        <h2 class="headerSubTitle">POR MEDIO DE TRANSPORTE</h2>
+        <h1>INCIDENTES DE TRANSPORTE</h1>
+        <h2>ESTADÍSTICAS DE INCIDENTES ACUÁTICOS</h2>
       </div>
     </header>
-    <main role="main">
+    <main>
       <section>
-        <div class="headerEachPage">
-          <div class="iconEach"><a href="index.html"><img src="imgs/backArrow-04.svg" alt="Back Arrow"></a></div>
-          <img class="mediaIconA" src="imgs/acuatico-08.svg" alt="Ship Icon" />
-          <h2 class="h2Acua">ACUÁTICO</h2>
-        </div>
+        <div class="headerSecondary">
+          <div class="backArrow"><a href="index.html"><img src="imgs/DataLovers-04.svg" alt="Back Arrow"></a></div>
       </section>
       <h4 class="mainTitle">Total de Incidentes Acuáticos</h4>
       <div id="totalWaterIncidents" class="totalIncidents">
         <p id= "showTotalIncident"></p>
       </div>
-      <h4 class="mainTitle">Los dos incidentes acuáticos más recurrentes</h4>
+      <h4 class="mainTitle">Incidentes con mayor número de personas afectadas</h4>
       <div id="twoMainWaterIncidents" class="twoMainIncidents">
         <p id="mainIncident1"></p>
         <p id="mainIncident2"></p>
       </div>
-      <div id="P">
-        <h3>Ingrese el rango de años a evaluar</h3>
+
+      <div class="dateInputClass" id="dateInput">
+        <h3>Seleccione el rango de años a evaluar</h3>
         <select id="selectYear">
           <option value="2016,2015,2014,2013,2012,2011" selected>2016-2011</option>
           <option value="2010,2009,2008,2007,2006">2010-2006</option>
@@ -47,15 +46,20 @@
           <option value="2000,1999,1998,1997,1996">2000-1996</option>
           <option value="1995,1994,1993,1992,1991">1995-1991</option>
         </select>
+
+        <div>
+          <button class="clickmeClass" id="clickme">Mostrar</button>
+        </div>
       </div>
       <section class="tables">
-        <h4 class="mainTitle">Incidentes Acuaticos</h4>
-        <div>
-          <button id="clickme">mostrar</button>
+        <h4 class="mainTitle">Incidentes Acuáticos</h4>
+
+        <div id="container_datos">
         </div>
-        <div id="container_datos"></div>
+
       </section>
-      <section class="graphics">
+      
+        <section class="graphics">
           <div id="chart"></div>
         </section>
 
@@ -65,10 +69,13 @@
       © Caribbean Data Lovers 2019
     </footer>
     <!--div id root closing--></div>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="./data/injuries/injuries.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+  <script src="./data/injuries/injuries.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+ 
+
 
 </body>
 

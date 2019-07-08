@@ -13,33 +13,40 @@
 
 <body id="land">
   <div id="root">
-    <header>
-      <img class="shield" src="imgs/punta-05.svg" alt="ornamentación">
-      <img class="mediaIconSmall" src="imgs/terrestre-07.svg" alt="Car Icon" />
-      <div class="headerText">
-        <h2 class="headerTitle">ESTADÍSTICAS DE INCIDENTES</h2>
-        <h2 class="headerSubTitle">POR MEDIO DE TRANSPORTE</h2>
+    <header class="header">
+      <div class="brandBlock">
+        <img src="imgs/DataLovers-13.svg" alt="Logo" />
       </div>
-    </header>
-    <main role="main">
-      <section>
-        <div class="headerEachPage">
-          <div class="iconEach"><a href="index.html"><img src="imgs/backArrow-04.svg" alt="Back Arrow"></a></div>
-          <img class="mediaIconC" src="imgs/terrestre-07.svg" alt="Car Icon" />
-          <h2>TERRESTRE</h2>
+      <div class="headerText">
+        <h1>INCIDENTES DE TRANSPORTE</h1>
+        <h2>ESTADÍSTICAS DE INCIDENTES TERRESTRES</h2>
+      </div>
+      </header>
+      <main>
+        <section>
+          <section>
+            <div class="headerSecondary">
+              <div class="backArrow"><a href="index.html"><img src="imgs/DataLovers-04.svg" alt="Back Arrow"></a></div>
+
+          </section>
+        </section>
+        <h4 class="totalTitle">Total de Incidentes Terrestres</h4>
+        <div id="totalLandIncidents" class="totalIncidents">
+          <p>Aquí el valor calculado en lugar de esto</p>
         </div>
+
       </section>
       <h4 class="totalTitle">Total de Incidentes Terrestres</h4>
       <div id="totalLandIncidents" class="totalIncidents">
-        <p id= "showTotalIncident"></p>
+        <p id="showTotalIncident"></p>
       </div>
-      <h4 class="mainTitle">Los dos incidentes terrestres más recurrentes</h4>
+      <h4 class="mainTitle">Incidentes con mayor número de personas afectadas</h4>
       <div id="twoMainLandIncidents" class="twoMainIncidents">
         <p id="mainIncident1"></p>
         <p id="mainIncident2"></p>
       </div>
-      <div id="dateInput">
-        <h3>Ingrese el rango de años a evaluar</h3>
+      <div class="dateInputClass" id="dateInput">
+        <h3>Seleccione el rango de años a evaluar</h3>
         <select id="selectYear">
           <option value="2016,2015,2014,2013,2012,2011" selected>2016-2011</option>
           <option value="2010,2009,2008,2007,2006">2010-2006</option>
@@ -52,26 +59,27 @@
         <h4 class="mainTitle">Incidentes Terrestres</h4>
         <div>
           <button id="clickme">mostrar</button>
+
         </div>
-        <div id="container_datos">
-        </div>
+
+          <div id="container_datos">
+          </div>
       </section>
       <section class="graphics">
         <div id="chart"></div>
-      </section>
+      </section>    
+     
+      </main>
 
-    </main>
-
-    <footer>
-      © Caribbean Data Lovers 2019
-    </footer>
-    <!--div id root closing-->
+      <footer>
+        © Caribbean Data Lovers 2019
+      </footer>
+      <!--div id root closing-->
   </div>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="./data/injuries/injuries.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
-  
 
 </body>
 
