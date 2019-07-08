@@ -31,12 +31,12 @@
       </section>
       <h4 class="totalTitle">Total de Incidentes Aéreos</h4>
       <div id="totalAirIncidents" class="totalIncidents">
-        <p>Aquí el valor calculado en lugar de esto</p>
+        <p id= "showTotalIncident"></p>
       </div>
       <h4 class="mainTitle">Los dos incidentes aéreos más recurrentes</h4>
       <div id="twoMainAirIncidents" class="twoMainIncidents">
-        <p>Aquí el primero en lugar de esto</p>
-        <p>Aquí el segundo en lugar de esto</p>
+        <p id="mainIncident1"></p>
+        <p id="mainIncident2"></p>
       </div>
       <div id="dateInput">
         <h3>Ingrese el rango de años a evaluar</h3>
@@ -57,10 +57,9 @@
         </div>
 
       </section>
-
       <section class="graphics">
-        <canvas id="grafAereo"></canvas>
-      </section>
+          <div id="chart"></div>
+        </section>
 
     </main>
 
@@ -69,11 +68,10 @@
     </footer>
     <!--div id root closing-->
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="./data/injuries/injuries.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
-  <script>showTable(); </script>
  
 
 </body>
