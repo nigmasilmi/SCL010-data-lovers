@@ -79,7 +79,9 @@ header {
 
 .totalIncidents,
 .twoMainIncidents {
-  width: 90%;
+  width: 30%;
+  text-align: center;
+  font-size: 1.3em;
   margin: 0 auto;
   color: #333;
   border: 3px solid #fcbe32;

@@ -2,28 +2,18 @@
 const containerDatos = document.getElementById("container_datos");
 document.getElementById("clickme").addEventListener("click", (showPageData));
 
-
-//seleccion de rango de tiempo
-function changeYearsToList(years) {
-  let year = [];
-  for (let i = 0; i < years.length; i = i + 5) {
-    year.push(years.substring(i, i + 4));
-  }
-  return year;
-}
-
 //crear tablas
 function drawTable(year, transport) {
-  loadData();
-  year = changeYearsToList(year);
+  data.loadData();
+  year = data.changeYearsToList(year);
   let rows = "";
   let totals = [];
 
-  for (let i = 0; i < dataModified.get(year[0])[transport].length; i++) {
+  for (let i = 0; i < data.dataModified.get(year[0])[transport].length; i++) {
     let totalRow = 0;
-    rows += "<tr>" + "<td>" + dataModified.get(year[0])[transport][i].nameSpanish + "</td>";
+    rows += "<tr>" + "<td>" + data.dataModified.get(year[0])[transport][i].nameSpanish + "</td>";
     for (let j = 0; j < year.length; j++) {
-      let value = dataModified.get(year[j])[transport][i].value;
+      let value = data.dataModified.get(year[j])[transport][i].value;
       totalRow += value;
 
       if (value === null) {
@@ -34,7 +24,7 @@ function drawTable(year, transport) {
     }
     rows += "<tr>";
     totals.push({
-      "nameSpanish": dataModified.get(year[0])[transport][i].nameSpanish,
+      "nameSpanish": data.dataModified.get(year[0])[transport][i].nameSpanish,
       "totalRow": totalRow
     });
   }
@@ -52,6 +42,16 @@ function drawTable(year, transport) {
   return totals;
 }
 
+
+//calculado la cantidad de incidentes por medio de tranporte
+function showTotalIncident(transport) {
+  let total = data.dataModified.get("1960")[transport].length;
+  document.getElementById("showTotalIncident").innerHTML = total;
+  document.getElementById("percent1").innerHTML = "Aire = " + data.percent().percentair;
+  document.getElementById("percent2").innerHTML = "Tierra = " + data.percent().percentland;
+  document.getElementById("percent3").innerHTML = "Agua = " + data.percent().percentWater;
+
+}
 //calcular los dos incidentes con mas leccionados
 function showIncidentsWihtMoreInjuries(totals) {
   let max1 = {
@@ -74,12 +74,6 @@ function showIncidentsWihtMoreInjuries(totals) {
   document.getElementById("mainIncident2").innerHTML = max2.nameSpanish;
 }
 
-//calculado la cantidad de incidentes por medio de tranporte
-function showTotalIncident(transport) {
-  let total = dataModified.get("1960")[transport].length;
-  document.getElementById("showTotalIncident").innerHTML = total;
-}
-
 //Inicializando graficos de google
 
 google.charts.load('current', {
@@ -94,7 +88,7 @@ function showPageData() {
   let totals = drawTable(years, transport);
   showTotalIncident(transport);
 
-  // Create the data table.
+  //Crear la tabla de datos.
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Incidentes');
   data.addColumn('number', 'Totales');
@@ -102,36 +96,15 @@ function showPageData() {
     data.addRow([totals[i].nameSpanish, totals[i].totalRow])
   }
 
-  // Set chart options
+  //Establecer opciones de gráfico
   var options = {
     'title': 'Incidentes totales por año',
     'width': 800,
     'height': 300
   };
 
-  // Instantiate and draw our chart, passing in some options.
+  //Crea una instancia y dibuja la gráfica, pasando algunas opciones.
   var chart = new google.visualization.PieChart(document.getElementById('chart'));
   chart.draw(data, options);
 }
 
-//funcion para el promedio
-function percent() {
-  let years = document.getElementById("selectYear").value;
-  year = changeYearsToList(years);
-  let totalYeartotalsland = 0;
-  let totalsWater = 0;
-  let totalsAir = 0;
-  let percentair = 0;
-
-  for (let j = 0; j < year.length; j++) {
-    totalsland = dataModified.get(year[j]).totalLand;
-    totalsWater = dataModified.get(year[j]).totalWater;
-    totalsAir = dataModified.get(year[j]).totalAir;
-  }
-  percentair = (totalsAir * 100) / (totalsland + totalsWater + totalsAir);
-  percentland = (totalsland * 100) / (totalsland + totalsWater + totalsAir);
-  percentWater = (totalsWater * 100) / (totalsland + totalsWater + totalsAir);
-
-  return {percentair ,percentland,percentWater};
-
-}
