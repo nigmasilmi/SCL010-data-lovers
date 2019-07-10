@@ -1,16 +1,27 @@
 global.window = global;
 global.assert = require('chai').assert;
-require('../src/data');
+require('../src/data/injuries/injuries.js');
+require('../src/data.js');
 require('./data.spec.js');
 
+describe('data', () => {
 
-describe('loadData', () => {
-  
-  it('debería ser una función', () => {
-    assert.equal(typeof loadData, 'function');
+  it('debería ser una objeto', () => {
+    assert.equal(typeof data, 'object');
   });
 
- /* it('debería retornar "example"', () => {
-    assert.equal(example(), 'example');
-  });*/
-})
+  describe('data.loadData', () => {
+
+    it('debería ser una función', () => {
+      assert.equal(typeof data.loadData, 'function');
+    });
+  });
+
+  describe('data.percent', () => {
+
+    it('debería ser una función', () => {
+      assert.equal(typeof data.percent, 'function');
+    });
+  });
+
+});

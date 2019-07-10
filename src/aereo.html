@@ -22,23 +22,33 @@
         <h2>ESTADÍSTICAS DE INCIDENTES AÉREOS</h2>
       </div>
     </header>
+
     <main>
       <section>
         <div class="headerSecondary">
           <div class="backArrow"><a href="index.html"><img src="imgs/DataLovers-04.svg" alt="Back Arrow"></a></div>
-
+        </div>
       </section>
+
+      <h4 class="mainTitle">Porcentajes de los incidentes en el período de años seleccionado</h4>
+      <div id="totalPercent" class="totalIncidents">
+        <p id="percent1"></p>
+        <p id="percent2"></p>
+        <p id="percent3"></p>
+      </div>
+
       <h4 class="totalTitle">Total de Incidentes Aéreos</h4>
       <div id="totalAirIncidents" class="totalIncidents">
-        <p id= "showTotalIncident"></p>
+        <p id="showTotalIncident"></p>
       </div>
+
       <h4 class="mainTitle">Incidentes con mayor número de personas afectadas</h4>
       <div id="twoMainAirIncidents" class="twoMainIncidents">
         <p id="mainIncident1"></p>
         <p id="mainIncident2"></p>
       </div>
 
-       <div class="dateInputClass" id="dateInput">
+      <div class="dateInputClass" id="dateInput">
         <h3>Seleccione el rango de años a evaluar</h3>
         <select class="selectYearClass" id="selectYear">
           <option value="2016,2015,2014,2013,2012,2011" selected>2016-2011</option>
@@ -47,21 +57,21 @@
           <option value="2000,1999,1998,1997,1996">2000-1996</option>
           <option value="1995,1994,1993,1992,1991">1995-1991</option>
         </select>
+
         <div>
           <button class="clickmeClass" id="clickme">Mostrar</button>
         </div>
       </div>
+
       <section class="tables">
-
         <h4 class="mainTitle">Incidentes Aéreos</h4>
-
         <div id="container_datos">
         </div>
-
       </section>
+
       <section class="graphics">
-          <div id="chart"></div>
-        </section>
+        <div id="chart"></div>
+      </section>
 
     </main>
 
@@ -74,7 +84,7 @@
   <script src="./data/injuries/injuries.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
- 
+
 </body>
 
 </html>
