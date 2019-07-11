@@ -49,9 +49,9 @@ function showTotalIncident(transport) {
   let years = document.getElementById("selectYear").value;
 
   document.getElementById("showTotalIncident").innerHTML = total;
-  document.getElementById("percent1").innerHTML = "Aire = " + data.percent(years).percentair+" %";
-  document.getElementById("percent2").innerHTML = "Tierra = " + data.percent(years).percentland+" %";
-  document.getElementById("percent3").innerHTML = "Agua = " + data.percent(years).percentWater+" %";
+  document.getElementById("percent1").innerHTML = "Aire = " + data.percent(years).percentair + " %";
+  document.getElementById("percent2").innerHTML = "Tierra = " + data.percent(years).percentland + " %";
+  document.getElementById("percent3").innerHTML = "Agua = " + data.percent(years).percentWater + " %";
 
 }
 //calcular los dos incidentes con mas leccionados
@@ -109,4 +109,3 @@ function showPageData() {
   var chart = new google.visualization.PieChart(document.getElementById('chart'));
   chart.draw(data, options);
 }
-

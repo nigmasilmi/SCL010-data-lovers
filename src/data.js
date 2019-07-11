@@ -101,9 +101,9 @@ window.data = {
       });
     }
   },
-  
+
   percent: (years) => {
-   
+
     let year = data.changeYearsToList(years);
     let totalsAir = 0;
     let totalsland = 0;
