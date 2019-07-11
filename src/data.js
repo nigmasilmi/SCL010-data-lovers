@@ -101,9 +101,9 @@ window.data = {
       });
     }
   },
-
-  percent: () => {
-    let years = document.getElementById("selectYear").value;
+  
+  percent: (years) => {
+   
     let year = data.changeYearsToList(years);
     let totalsAir = 0;
     let totalsland = 0;
@@ -115,9 +115,9 @@ window.data = {
       totalsWater = data.dataModified.get(year[j]).totalWater;
       totalsAir = data.dataModified.get(year[j]).totalAir;
     }
-    let percentair = parseFloat((totalsAir * 100) / (totalsland + totalsWater + totalsAir)).toFixed(2) + "%";
-    let percentland = parseFloat((totalsland * 100) / (totalsland + totalsWater + totalsAir)).toFixed(2) + "%";
-    let percentWater = parseFloat((totalsWater * 100) / (totalsland + totalsWater + totalsAir)).toFixed(2) + "%";
+    let percentair = parseFloat((totalsAir * 100) / (totalsland + totalsWater + totalsAir)).toFixed(2);
+    let percentland = parseFloat((totalsland * 100) / (totalsland + totalsWater + totalsAir)).toFixed(2);
+    let percentWater = parseFloat((totalsWater * 100) / (totalsland + totalsWater + totalsAir)).toFixed(2);
 
     return {
       percentair,
@@ -126,7 +126,7 @@ window.data = {
     };
   },
 
-  //seleccion de rango de tiempo
+  //esta funcion me convierte el string de la seleccion de años en un arreglo
   changeYearsToList: (years) => {
     let year = [];
     for (let i = 0; i < years.length; i = i + 5) {

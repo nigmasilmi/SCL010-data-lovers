@@ -4,10 +4,10 @@
   "main": "src/index.html",
   "license": "MIT",
   "scripts": {
-    "htmlhint": "htmlhint src/*.html test/*.html",
+    "htmlhint": "htmlhint src/.html test/.html",
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
-    "test": "mocha"
+    "test": "nyc mocha"
   },
   "dependencies": {
     "chai": "^4.2.0",
