@@ -46,10 +46,12 @@ function drawTable(year, transport) {
 //calculado la cantidad de incidentes por medio de tranporte
 function showTotalIncident(transport) {
   let total = data.dataModified.get("1960")[transport].length;
+  let years = document.getElementById("selectYear").value;
+
   document.getElementById("showTotalIncident").innerHTML = total;
-  document.getElementById("percent1").innerHTML = "Aire = " + data.percent().percentair;
-  document.getElementById("percent2").innerHTML = "Tierra = " + data.percent().percentland;
-  document.getElementById("percent3").innerHTML = "Agua = " + data.percent().percentWater;
+  document.getElementById("percent1").innerHTML = "Aire = " + data.percent(years).percentair + " %";
+  document.getElementById("percent2").innerHTML = "Tierra = " + data.percent(years).percentland + " %";
+  document.getElementById("percent3").innerHTML = "Agua = " + data.percent(years).percentWater + " %";
 
 }
 //calcular los dos incidentes con mas leccionados
@@ -107,4 +109,3 @@ function showPageData() {
   var chart = new google.visualization.PieChart(document.getElementById('chart'));
   chart.draw(data, options);
 }
-

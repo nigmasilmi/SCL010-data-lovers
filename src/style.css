@@ -1,7 +1,10 @@
-a, a:hover, a:visited{
+a,
+a:hover,
+a:visited {
   text-decoration: none;
   color: black;
 }
+
 body {
   font-family: 'Questrial', sans-serif;
   margin: 0px;
@@ -73,7 +76,8 @@ header {
 .btnContainer h4 {
   text-align: center;
 }
-.btnContainerRes{
+
+.btnContainerRes {
   display: none;
 }
 
@@ -159,13 +163,14 @@ footer {
 
 /*CELLPHONES MEDIA QUERY*/
 @media screen and (max-width: 500px) {
-  .headerText h1{
-    font-size:1.3em;
-    
+  .headerText h1 {
+    font-size: 1.3em;
+
   }
-  .headerText h2{
+
+  .headerText h2 {
     font-size: 1em;
-    
+
   }
 }
 
@@ -175,12 +180,14 @@ footer {
   .brandBlock img {
     width: 30vw;
     margin-left: -4vw;
-  
-  }
-.headerText{
-  font-size: 0.8em;
 
-}
+  }
+
+  .headerText {
+    font-size: 0.8em;
+
+  }
+
   .btnsContainer {
     display: flex;
     flex-direction: column;
@@ -190,7 +197,7 @@ footer {
   }
 
   .btnContainerRes {
-   display: flex;
+    display: flex;
     width: 70%;
     justify-content: space-around;
     text-align: center;
@@ -199,7 +206,7 @@ footer {
     -webkit-border-radius: 3%;
     -moz-border-radius: 3%;
     border-radius: 3%;
-    margin:2%;
+    margin: 2%;
     cursor: pointer;
     filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
     -webkit-filter: drop-shadow(-3px 7px 2px rgba(0, 0, 0, 0.15));
@@ -209,7 +216,7 @@ footer {
   }
 
 
-  .insidebtnConRes{
+  .insidebtnConRes {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -220,14 +227,15 @@ footer {
     filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
     -webkit-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
     -moz-filter: drop-shadow(-3px 7px 5px rgba(0, 0, 0, 0.35));
- 
-   }
-  .btnContainer{
-    display: none;
-   
+
   }
 
- 
-  
+  .btnContainer {
+    display: none;
+
+  }
+
+
+
 
 }
