@@ -100,7 +100,7 @@ function showPageData() {
 
   //Establecer opciones de gráfico
   var options = {
-    'title': 'Incidentes totales por año',
+    'title': 'Incidentes totales por Período',
     'width': 800,
     'height': 300
   };

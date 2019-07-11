@@ -75,15 +75,23 @@ header {
 
 .btnContainer h4 {
   text-align: center;
+
 }
 
 .btnContainerRes {
   display: none;
 }
 
+.dataSidetoSide{
+  
+  display: flex;
+  margin-top: -1%;
+  margin-bottom: 1%;
+}
+
 .totalIncidents,
 .twoMainIncidents {
-  width: 30%;
+  width: 25%;
   text-align: center;
   font-size: 1.3em;
   margin: 0 auto;
@@ -95,17 +103,20 @@ header {
 .totalTitle,
 .mainTitle {
   font-weight: 400;
-  font-size: 1.6em;
+  font-size: 1.4em;
   text-align: center;
 
 }
 
-.totalIncidents p,
-.twoMainIncidents p {
-  border-bottom: 1.5px solid #333;
+.totalIncidents h4,
+.twoMainIncidents h4 {
+  border-bottom: 1px solid #333;
 }
 
 .dateInputClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 400;
   font-size: 1.3em;
   text-align: center;
@@ -116,6 +127,8 @@ header {
   background-color: #fcbe32;
   border: 1.5px solid #333;
   font-size: 0.8em;
+  margin-left: 3%;
+  width: 10%;
 
 }
 
@@ -127,11 +140,13 @@ option {
 .clickmeClass {
   background-color: #fec01c;
   border: 2px solid #fec01c;
-  padding: 0.5%;
+  width: 150%;
   cursor: pointer;
   font-size: 0.8em;
   margin: 2%;
   transition: border .5s ease-in-out;
+ margin-left: 20%;
+ align-self: center;
 }
 
 
